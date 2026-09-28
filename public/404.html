@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Git Club CHARUSAT — Challenge Arena</title>
+    <script>
+      // Single Page App redirect for GitHub Pages
+      // Redirects 404 paths back to index.html with appropriate hash
+      const pathSegments = window.location.pathname.split('/').filter(Boolean);
+      // If deployed in a subfolder (like /repository-name/), preserve the repo name
+      const repoName = pathSegments.length > 0 ? pathSegments[0] : '';
+      const redirectUrl = '/' + (repoName ? repoName + '/' : '') + '#challenges';
+      window.location.replace(redirectUrl);
+    </script>
+  </head>
+  <body style="background-color: #020617; color: #f8fafc; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+    <p>Redirecting to Git Club Challenge Arena...</p>
+  </body>
+</html>
